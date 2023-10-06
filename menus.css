@@ -1,0 +1,52 @@
+.menus{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    gap:20px;
+    padding: 5px;
+    margin-block: 0px;
+}
+
+.active-option{
+    background-color: #d0d8e0;
+}
+
+
+.menus>div{
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.5 ease;
+    border-radius: 5px;
+}
+
+.menus>div:hover{
+    background-color: #d0d8e0aa;
+}
+
+#bold{
+    font-size: 30;
+}
+
+
+.file-options{
+    display: flex;
+    align-items:flex-end;
+    color: #ffffff;
+    background-color: #218C74;
+    padding-top: 20px;
+    padding-inline: 10px;
+    height: 30px;
+
+}
+
+.file-options>p{
+    padding-inline: 10px;
+    padding-block: 5px;
+    transition: all 0.1s ease;
+}
+
+.file-options>p:hover{
+    background-color: #d0d8e0;
+    color: #218C74;
+    cursor: pointer;
+}

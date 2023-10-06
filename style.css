@@ -1,0 +1,107 @@
+*{
+    margin :0px;
+    padding: 0px; 
+}
+
+#header{
+    display: flex;
+    position: sticky;
+    top : 0px;
+    z-index: 1;
+    width: fit-content;
+}
+
+#header>b{
+    min-width: 100px;
+    border: 1px solid #dfe4e9;
+    background-color: #fff;
+    padding-block: 10px;
+    text-align: center;
+}
+
+
+
+.row{
+    display: flex; 
+}
+
+
+
+.row>div{
+    min-width: 100px;
+    border: 1px solid #dfe4e9;
+    padding-block: 10px;
+    background: #ffffff;
+}
+
+
+#num{
+    text-align: center;
+    position: sticky;
+    left :0px;
+    z-index: 0 ;
+    font-weight: 700;
+}
+
+#options {
+    /* padding: 10px; */
+    background-color: #ecf0f1;
+  }
+
+#active-cell{
+    background-color: #ffffff;
+    padding:  2px 20px;
+    margin-left: 10px;
+}
+
+
+/* #body{
+    width:fit-content;
+} */
+
+
+/* #options{
+    position: fixed;
+    width:100vw;
+    top:0px;
+    left:0px;
+    overflow: hidden;
+    z-index: 1;
+} */
+
+main {
+    max-height: calc(94vh - 123px); /* Adjust as needed based on your fixed header height */
+    overflow: auto; /* Enable vertical scrolling when needed */
+    width: fit-content; /* Adjust the width as needed */
+}
+
+
+#body{
+    position:relative;
+    /* top : 123px; */
+}
+
+
+
+#addSheets{
+    height: 5vh;
+
+    width: 100vw;
+    bottom: 0px;
+}
+
+
+#sheetAddBtn:hover{
+    cursor: pointer;
+}
+
+
+
+.activeSheet{
+    background-color: #dbdbdb;
+    border-radius: 5px;
+}
+
+.sheet{
+    padding-inline: 10px;
+}

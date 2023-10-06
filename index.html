@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="menus.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="options">
+        <div class="file-options">
+            <p>File</p>
+            <p style="background-color: #ECF0F1; color: #218C74;">Home</p>
+            <p>Insert</p>
+            <p>Layout</p>
+            <p>Help</p>
+        </div>
+        <div class="menus">
+            <div>
+                <select id = fontSelect>
+                    <option value="Fanatasy">Fanatasy</option>
+                    <option value="MonoSpace">MonoSpace</option>
+                    <option value="Sans-Serif">Sans-Serif</option> 
+                    <option value="cursive">cursive</option>
+                </select>
+            </div>
+
+            <div>
+                <select id="font-size">
+                    <option value="14px">14</option>
+                    <option value="16px">16</option>
+                    <option value="18px">18</option>
+                    <option value="20px">20</option>
+                    <option value="22px">22</option>
+                    <option value="24px">24</option>
+                </select>
+            </div>
+
+            <div id="bold" onclick="onClickBold(this)">B</div>
+            <div id="italic" onclick="onClickItalic(this)">I</div>
+            <div id="underlined" onclick="onClickUnderline(this)">U</div>
+            <div
+                class="material-icons active-option text-align"
+                data-value="start"
+                onclick="onClickTextAlign(this)"
+            >
+                format_align_left
+            </div>
+            <div
+                class="material-icons text-align"
+                data-value="right"
+                onclick="onClickTextAlign(this)"
+            >
+                format_align_right
+            </div>
+            <div
+                class="material-icons text-align"
+                data-value="center"
+                onclick="onClickTextAlign(this)"
+            >
+                format_align_center
+            </div>
+
+            <div id="text-color">
+                <label for="color-picker"
+                ><span class="material-icons"> border_color </span></label
+                >
+                <input
+                onchange="onChangeTextColor(this)"
+                type="color"
+                id="color-picker"
+                style="display: none;"
+                />
+            </div>
+
+            <div id="bg-color">
+                <label for="bgcolor-picker"
+                ><span class="material-icons"> format_color_fill </span></label
+                >
+                <input
+                    onchange="onChangeBackgroundColor(this)"
+                    type="color"
+                    id="bgcolor-picker"
+                    style="display: none;"
+                />
+            </div>
+            <div id="download-button"><i class="fa-solid fa-cloud-arrow-down" style="font-size: 20px;"></i></div>
+            <div id="upload-button"><i class="fa-solid fa-cloud-arrow-up" style="font-size: 20px;"></i>
+                <input type="file" id="file-input" accept=".json" style="display: none;">
+            </div>
+        </div>
+        
+        <section style="padding: 5px;">
+            <span id="active-cell">null</span>
+            <span style="padding-inline: 5px;">fx</span>
+            <span><input type="text" style="border: none; outline: none; padding: 2px;width:auto">
+        </span></section>
+        
+    </div>
+    <main style="width: 100vw;">
+        <div id="header" >
+            <b style="position: sticky; left: 0px;">S.No</b>
+        </div>
+        <section id = "body"></section>
+    </main>
+
+    <div id="addSheets" style="display: flex; gap: 20px; align-items: center;" >
+        <div class="material-icons" id="sheetAddBtn">post_add</div> 
+        <div id="sheetsContainer" style="display: flex; align-items: center;">
+            <div class="sheet activeSheet" data-value="0" onclick="sheetSelect(this, event)">sheet1</div>
+        </div> 
+    </div>
+
+    <script src="./options.js"></script>
+    <script src="./scipt.js"></script>
+</body>
+</html>
