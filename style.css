@@ -82,7 +82,9 @@ main {
 }
 
 
-
+.sheet:hover{
+    cursor: pointer;
+}
 #addSheets{
     height: 5vh;
 
